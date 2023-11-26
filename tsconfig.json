@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/EditTopicForm.jsx", "components/RemoveBtn.jsx", "components/TopicsList.jsx", "app/editTopic/[id]/page.jsx", "app/api/topics/[id]/route.js"],
   "exclude": ["node_modules"]
 }

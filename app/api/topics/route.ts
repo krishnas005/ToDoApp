@@ -1,8 +1,8 @@
 import connectMongoDB from "@/libs/mongodb";
 import Topic from "@/models/topic";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(request) {
+export async function POST(request:NextRequest) {
   const { title, description } = await request.json();
   await connectMongoDB();
   await Topic.create({ title, description });
@@ -15,7 +15,7 @@ export async function GET() {
   return NextResponse.json({ topics });
 }
 
-export async function DELETE(request) {
+export async function DELETE(request:NextRequest) {
   const id = request.nextUrl.searchParams.get("id");
   await connectMongoDB();
   await Topic.findByIdAndDelete(id);
