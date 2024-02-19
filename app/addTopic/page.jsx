@@ -9,7 +9,7 @@ export default function AddTopic() {
 
   const router = useRouter();
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!title || !description) {
